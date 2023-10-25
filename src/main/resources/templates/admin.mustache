@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/admin.js" defer></script>
+</head>
+
+<body>
+
+<div>
+    <form action="/logout" method="post">
+        <!--tok-->
+        <input type="submit" value="LogOut" />
+    </form>
+</div>
+<h1>Welcome to Admin Page</h1>
+
+<h2>Add User</h2>
+
+<h6>Here we use POST method:
+    <br>{
+    <br>"username": "name",
+    <br>"password": "pass"
+    <br>}
+</h6>
+
+<br>You cannot:
+<br>1.create a user with the same name.
+<br>2.delete a user if there are any subscriptions associated with him.
+<br>First unsubscribe from all subscriptions. (cascade deletion was not implemented)
+<br>
+<br>
+<div>
+    <form id="registrationForm">
+        <input type="text" name="username" placeholder="Enter name" required />
+        <input type="password" name="password" placeholder="Enter password" required />
+        <button type="submit">Add</button>
+    </form>
+    <div id="errorContainer" style="color: red;"></div>
+</div>
+
+
+
+<h2>User List</h2>
+<table>
+    <thead>
+    <tr>
+        <th>id</th>
+        <th>Name</th>
+        <th>Password</th>
+        <th>Role</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#users}}
+    <tr>
+        <td>{{id}}</td>
+        <td>{{username}}</td>
+        <td>{{password}}</td>
+        <td>{{roles}}</td>
+        <td>
+            <button onclick="deleteUser('{{username}}')">Delete</button>
+        </td>
+    </tr>
+    {{/users}}
+    </tbody>
+</table>
+
+</body>
+</html>

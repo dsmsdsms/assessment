@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Categories Page</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/categories.js" defer></script>
+</head>
+
+<body>
+
+<div>
+    <form action="/logout" method="post">
+        <!--tok-->
+        <input type="submit" value="LogOut" />
+    </form>
+    <a href="/main" class="custom-button">Back</a>
+</div>
+<h1>
+    <span id="currentUsername"></span>, welcome to the categories page
+</h1>
+
+
+
+<h2>Getting categories</h2>
+<h6>Here we use the GET method:
+    <br>{
+    <br>"name":"Dutch Films",
+    <br>"availableContent":10,
+    <br>"price":4.0
+    <br>}
+</h6>
+    <br>Here you can add/remove a category.
+    <br>
+    <br>1. A category cannot be deleted if it is subscribed or shared
+    <br>
+    <br>2. To delete a category, you must unsubscribe from it for each user who was subscribed to it or was shared.
+    <br>   To do this, each user needs to log in and unsubscribe from the category
+    <br>
+    <br>3. You cannot create a category with the same name. The name must be unique
+    <br>
+    <br>
+
+<div>
+    <form id="categoriesForm">
+        <input type="text" name="name" placeholder="Category name" required />
+        <input type="number" name="availableContent" placeholder="availableContent" required />
+        <input type="number" name="price" placeholder="price" required />
+        <button type="submit">Add</button>
+    </form>
+    <div id="errorContainer" style="color: red;"></div>
+</div>
+
+
+
+<h2>Available Category List</h2>
+<table>
+    <thead>
+    <tr>
+        <th>Category name</th>
+        <th>Available content</th>
+        <th>Price</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#categories}}
+    <tr>
+        <td>{{name}}</td>
+        <td>{{availableContent}}</td>  <!-- если у Category есть поле availableContent -->
+        <td>{{price}}</td>              <!-- если у Category есть поле price -->
+        <td>
+            <button onclick="deleteCategory('{{id}}')">Delete</button>
+        </td>
+    </tr>
+    {{/categories}}
+    </tbody>
+</table>
+
+
+</body>
+</html>

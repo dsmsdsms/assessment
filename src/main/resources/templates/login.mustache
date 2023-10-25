@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Login page</title>
+</head>
+<body>
+<h2>Login page</h2>
+<form action="/login" method="post">
+    <div><label> User Name : <input type="text" name="username" placeholder="Enter name" /> </label></div>
+    <div><label> Password: <input type="password" name="password" placeholder="Enter password" /> </label></div>
+
+    {{#errorMessage}}
+    <div style="color: red;">{{errorMessage}}</div>
+    {{/errorMessage}}
+
+    <div><input type="submit" value="Login"/></div>
+</form>
+<!--<a href="/registration">Add new user</a>-->
+
+    <br> Hello.
+    <br> Yes, I'm not a very good designer :))
+    <br>
+    <br> To manage users (there you can see/add/remove users), log in as: admin, passw: admin
+    <br>
+    <br> Standard user: sa, passw: sa
+    <br> After logging in, you can manage category subscriptions on the corresponding pages
+    <br>
+    <br> Оn the category page you can add/remove a category
+    <br>
+    <br> Оn the subscriptions page you can subscribe/unsubscribe/share a subscription to a category
+<br>
+<br><h3>To work from Postman:</h3>
+<br>
+<br>Login: method POST, http://localhost:8080/login, username: password:
+<br>Add category: method POST, http://localhost:8080/api/categories/add, JSON body:
+<br>{
+<br>"name": "International Films",
+<br>"availableContent": 5,
+<br>"price": 8
+<br>}
+<br>
+<br>Get all category: method GET, http://localhost:8080/api/categories
+<br>
+<br>Delete category: method DELETE, http://localhost:8080/api/categories/{id}
+<br>
+<br>Add user: method POST, http://localhost:8080/registration, JSON body:
+<br>{
+<br>"username": "q",
+<br>"password": "q"
+<br>}
+<br>Delete user: method POST, http://localhost:8080/delete/{user name}
+<br>
+<br>
+<br>Subscribe: method POST, http://localhost:8080/api/subscriptions/subscribe
+<br>key: categoryName, value: Dutch Series
+<br>
+<br>Get available cat & subscriptions: method GET, http://localhost:8080/api/subscriptions/categories
+<br>
+<br>Delete subscription: method DELETE, http://localhost:8080/api/subscriptions/{id}
+<br>
+<br>Share subscription: method POST, http://localhost:8080/api/subscriptions/share
+<br>key:subscriptionId, value: {id cat}
+<br>key:shareWithUsername, value: {user_name}
+<br>
+<br>
+<br>
+<br>
+
+
+
+</body>
+</html>

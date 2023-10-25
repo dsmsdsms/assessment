@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Categories Page</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/subscriptions.js" defer></script>
+    <script src="/categories.js" defer></script>
+</head>
+
+<body>
+
+<div>
+    <form action="/logout" method="post">
+        <!--tok-->
+        <input type="submit" value="LogOut" />
+    </form>
+    <a href="/main" class="custom-button">Back</a>
+</div>
+
+<h1>
+    <span id="currentUsername"></span>, welcome to the categories page
+</h1>
+
+
+<h2>Getting categories</h2>
+
+<br>Here you can subscribe/unsubscribe/share a subscription to a category.
+<br>
+<br>You can not:
+<br>1.subscribe twice to the same category
+<br>2.share category with yourself
+<br>3.share a category if you have already shared it or someone has shared it with you
+<br>
+
+<h2>Available Category List</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Category name</th>
+            <th>Available content</th>
+            <th>Price</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+    {{#availableCategories}}
+    <tr data-category-name="{{name}}">
+        <td>{{name}}</td>
+        <td>{{availableContent}}</td>
+        <td>{{price}}</td>
+        <td>
+            <button onclick="subscribeToCategory(this)">Subscribe</button>
+        </td>
+    </tr>
+    {{/availableCategories}}
+    </tbody>
+</table>
+
+
+<h2>Your Subscriptions</h2>
+
+<table>
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Category name</th>
+        <th>Remaining content</th>
+        <th>Price</th>
+        <th>Start Date</th>
+        <th>Start PaymentDate</th>
+        <th>Shared with</th>
+        <th>Action</th>
+        <th>Share</th>
+        <th>Share with:</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#subscribedCategories}}
+    <tr data-subscription-id="{{id}}">
+        <td>{{id}}</td>
+        <td>{{name}}</td>
+        <td>{{remainingContent}}</td>
+        <td>{{price}}</td>
+        <td>{{startDate}}</td>
+        <td>{{startPaymentDate}}</td>
+        <td>{{#sharedWith}}
+            {{sharedWith}}
+            {{/sharedWith}}
+        </td>
+        <td>
+            <button onclick="unsubscribeFromCategory(this, {{id}})">Unsubscribe</button>
+        </td>
+        <td>
+            <button onclick="shareSelectedSubscription(this)">Share</button>
+        </td>
+        <td>
+            <select name="userDropdown" id="userDropdown">
+                {{#users}}
+                <option value="{{username}}">{{username}}</option>
+                {{/users}}
+            </select>
+        </td>
+    </tr>
+    {{/subscribedCategories}}
+    </tbody>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,1416 @@
+2023-10-24 23:47:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE CATEGORY (ID BIGINT NOT NULL, AVAILABLE_CONTENT INTEGER, NAME VARCHAR(255), PRICE DOUBLE PRECISION, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE CATEGORY (ID BIGINT NOT NULL, AVAILABLE_CONTENT INTEGER, NAME VARCHAR(255), PRICE DOUBLE PRECISION, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table category (id bigint not null, available_content integer, name varchar(255), price double precision, primary key (id)) engine=InnoDB [42001-200]
+2023-10-24 23:47:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE HIBERNATE_SEQUENCE (NEXT_VAL BIGINT) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE HIBERNATE_SEQUENCE (NEXT_VAL BIGINT) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table hibernate_sequence (next_val bigint) engine=InnoDB [42001-200]
+2023-10-24 23:47:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "HIBERNATE_SEQUENCE" не найдена
+Table "HIBERNATE_SEQUENCE" not found; SQL statement:
+insert into hibernate_sequence values ( 1 ) [42102-200]
+2023-10-24 23:47:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE SUBSCRIPTIONS (ID BIGINT NOT NULL AUTO_INCREMENT, PRICE DOUBLE PRECISION, REMAINING_CONTENT INTEGER, START_DATE DATE, START_PAYMENT_DATE DATE, CATEGORY_ID BIGINT, SHARED_WITH_ID BIGINT, USER_ID BIGINT, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE SUBSCRIPTIONS (ID BIGINT NOT NULL AUTO_INCREMENT, PRICE DOUBLE PRECISION, REMAINING_CONTENT INTEGER, START_DATE DATE, START_PAYMENT_DATE DATE, CATEGORY_ID BIGINT, SHARED_WITH_ID BIGINT, USER_ID BIGINT, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table subscriptions (id bigint not null auto_increment, price double precision, remaining_content integer, start_date date, start_payment_date date, category_id bigint, shared_with_id bigint, user_id bigint, primary key (id)) engine=InnoDB [42001-200]
+2023-10-24 23:47:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE USER_ROLE (USER_ID BIGINT NOT NULL, ROLES VARCHAR(255)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE USER_ROLE (USER_ID BIGINT NOT NULL, ROLES VARCHAR(255)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table user_role (user_id bigint not null, roles varchar(255)) engine=InnoDB [42001-200]
+2023-10-24 23:47:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE USR (ID BIGINT NOT NULL, ACTIVE BIT NOT NULL, PASSWORD VARCHAR(255), USERNAME VARCHAR(255), PRIMARY KEY (ID)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE USR (ID BIGINT NOT NULL, ACTIVE BIT NOT NULL, PASSWORD VARCHAR(255), USERNAME VARCHAR(255), PRIMARY KEY (ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table usr (id bigint not null, active bit not null, password varchar(255), username varchar(255), primary key (id)) engine=InnoDB [42001-200]
+2023-10-24 23:47:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CATEGORY" не найдена
+Table "CATEGORY" not found; SQL statement:
+alter table category drop index UK_46ccwnsi9409t36lurvtyljak [42102-200]
+2023-10-24 23:47:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CATEGORY" не найдена
+Table "CATEGORY" not found; SQL statement:
+alter table category add constraint UK_46ccwnsi9409t36lurvtyljak unique (name) [42102-200]
+2023-10-24 23:47:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "SUBSCRIPTIONS" не найдена
+Table "SUBSCRIPTIONS" not found; SQL statement:
+alter table subscriptions add constraint FKsebk9hy07w5y4a5vrgffo9i53 foreign key (category_id) references category (id) [42102-200]
+2023-10-24 23:47:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "SUBSCRIPTIONS" не найдена
+Table "SUBSCRIPTIONS" not found; SQL statement:
+alter table subscriptions add constraint FKkaixpsyjdf70umrxudsb8evwr foreign key (shared_with_id) references usr (id) [42102-200]
+2023-10-24 23:47:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "SUBSCRIPTIONS" не найдена
+Table "SUBSCRIPTIONS" not found; SQL statement:
+alter table subscriptions add constraint FKgajwxdqxsiqtb16p3l299jx foreign key (user_id) references usr (id) [42102-200]
+2023-10-24 23:47:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "USER_ROLE" не найдена
+Table "USER_ROLE" not found; SQL statement:
+alter table user_role add constraint FKfpm8swft53ulq2hl11yplpr5 foreign key (user_id) references usr (id) [42102-200]
+2023-10-24 23:47:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE CATEGORY (ID BIGINT NOT NULL, AVAILABLE_CONTENT INTEGER, NAME VARCHAR(255), PRICE DOUBLE PRECISION, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE CATEGORY (ID BIGINT NOT NULL, AVAILABLE_CONTENT INTEGER, NAME VARCHAR(255), PRICE DOUBLE PRECISION, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table category (id bigint not null, available_content integer, name varchar(255), price double precision, primary key (id)) engine=InnoDB [42001-200]
+2023-10-24 23:47:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE HIBERNATE_SEQUENCE (NEXT_VAL BIGINT) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE HIBERNATE_SEQUENCE (NEXT_VAL BIGINT) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table hibernate_sequence (next_val bigint) engine=InnoDB [42001-200]
+2023-10-24 23:47:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "HIBERNATE_SEQUENCE" не найдена
+Table "HIBERNATE_SEQUENCE" not found; SQL statement:
+insert into hibernate_sequence values ( 1 ) [42102-200]
+2023-10-24 23:47:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE SUBSCRIPTIONS (ID BIGINT NOT NULL AUTO_INCREMENT, PRICE DOUBLE PRECISION, REMAINING_CONTENT INTEGER, START_DATE DATE, START_PAYMENT_DATE DATE, CATEGORY_ID BIGINT, SHARED_WITH_ID BIGINT, USER_ID BIGINT, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE SUBSCRIPTIONS (ID BIGINT NOT NULL AUTO_INCREMENT, PRICE DOUBLE PRECISION, REMAINING_CONTENT INTEGER, START_DATE DATE, START_PAYMENT_DATE DATE, CATEGORY_ID BIGINT, SHARED_WITH_ID BIGINT, USER_ID BIGINT, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table subscriptions (id bigint not null auto_increment, price double precision, remaining_content integer, start_date date, start_payment_date date, category_id bigint, shared_with_id bigint, user_id bigint, primary key (id)) engine=InnoDB [42001-200]
+2023-10-24 23:47:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE USER_ROLE (USER_ID BIGINT NOT NULL, ROLES VARCHAR(255)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE USER_ROLE (USER_ID BIGINT NOT NULL, ROLES VARCHAR(255)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table user_role (user_id bigint not null, roles varchar(255)) engine=InnoDB [42001-200]
+2023-10-24 23:47:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE USR (ID BIGINT NOT NULL, ACTIVE BIT NOT NULL, PASSWORD VARCHAR(255), USERNAME VARCHAR(255), PRIMARY KEY (ID)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE USR (ID BIGINT NOT NULL, ACTIVE BIT NOT NULL, PASSWORD VARCHAR(255), USERNAME VARCHAR(255), PRIMARY KEY (ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table usr (id bigint not null, active bit not null, password varchar(255), username varchar(255), primary key (id)) engine=InnoDB [42001-200]
+2023-10-24 23:47:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CATEGORY" не найдена
+Table "CATEGORY" not found; SQL statement:
+alter table category drop index UK_46ccwnsi9409t36lurvtyljak [42102-200]
+2023-10-24 23:47:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CATEGORY" не найдена
+Table "CATEGORY" not found; SQL statement:
+alter table category add constraint UK_46ccwnsi9409t36lurvtyljak unique (name) [42102-200]
+2023-10-24 23:47:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "SUBSCRIPTIONS" не найдена
+Table "SUBSCRIPTIONS" not found; SQL statement:
+alter table subscriptions add constraint FKsebk9hy07w5y4a5vrgffo9i53 foreign key (category_id) references category (id) [42102-200]
+2023-10-24 23:47:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "SUBSCRIPTIONS" не найдена
+Table "SUBSCRIPTIONS" not found; SQL statement:
+alter table subscriptions add constraint FKkaixpsyjdf70umrxudsb8evwr foreign key (shared_with_id) references usr (id) [42102-200]
+2023-10-24 23:47:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "SUBSCRIPTIONS" не найдена
+Table "SUBSCRIPTIONS" not found; SQL statement:
+alter table subscriptions add constraint FKgajwxdqxsiqtb16p3l299jx foreign key (user_id) references usr (id) [42102-200]
+2023-10-24 23:47:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "USER_ROLE" не найдена
+Table "USER_ROLE" not found; SQL statement:
+alter table user_role add constraint FKfpm8swft53ulq2hl11yplpr5 foreign key (user_id) references usr (id) [42102-200]
+2023-10-24 23:48:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE CATEGORY (ID BIGINT NOT NULL, AVAILABLE_CONTENT INTEGER, NAME VARCHAR(255), PRICE DOUBLE PRECISION, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE CATEGORY (ID BIGINT NOT NULL, AVAILABLE_CONTENT INTEGER, NAME VARCHAR(255), PRICE DOUBLE PRECISION, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table category (id bigint not null, available_content integer, name varchar(255), price double precision, primary key (id)) engine=InnoDB [42001-200]
+2023-10-24 23:48:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE HIBERNATE_SEQUENCE (NEXT_VAL BIGINT) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE HIBERNATE_SEQUENCE (NEXT_VAL BIGINT) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table hibernate_sequence (next_val bigint) engine=InnoDB [42001-200]
+2023-10-24 23:48:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "HIBERNATE_SEQUENCE" не найдена
+Table "HIBERNATE_SEQUENCE" not found; SQL statement:
+insert into hibernate_sequence values ( 1 ) [42102-200]
+2023-10-24 23:48:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE SUBSCRIPTIONS (ID BIGINT NOT NULL AUTO_INCREMENT, PRICE DOUBLE PRECISION, REMAINING_CONTENT INTEGER, START_DATE DATE, START_PAYMENT_DATE DATE, CATEGORY_ID BIGINT, SHARED_WITH_ID BIGINT, USER_ID BIGINT, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE SUBSCRIPTIONS (ID BIGINT NOT NULL AUTO_INCREMENT, PRICE DOUBLE PRECISION, REMAINING_CONTENT INTEGER, START_DATE DATE, START_PAYMENT_DATE DATE, CATEGORY_ID BIGINT, SHARED_WITH_ID BIGINT, USER_ID BIGINT, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table subscriptions (id bigint not null auto_increment, price double precision, remaining_content integer, start_date date, start_payment_date date, category_id bigint, shared_with_id bigint, user_id bigint, primary key (id)) engine=InnoDB [42001-200]
+2023-10-24 23:48:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE USER_ROLE (USER_ID BIGINT NOT NULL, ROLES VARCHAR(255)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE USER_ROLE (USER_ID BIGINT NOT NULL, ROLES VARCHAR(255)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table user_role (user_id bigint not null, roles varchar(255)) engine=InnoDB [42001-200]
+2023-10-24 23:48:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE USR (ID BIGINT NOT NULL, ACTIVE BIT NOT NULL, PASSWORD VARCHAR(255), USERNAME VARCHAR(255), PRIMARY KEY (ID)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE USR (ID BIGINT NOT NULL, ACTIVE BIT NOT NULL, PASSWORD VARCHAR(255), USERNAME VARCHAR(255), PRIMARY KEY (ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table usr (id bigint not null, active bit not null, password varchar(255), username varchar(255), primary key (id)) engine=InnoDB [42001-200]
+2023-10-24 23:48:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CATEGORY" не найдена
+Table "CATEGORY" not found; SQL statement:
+alter table category drop index UK_46ccwnsi9409t36lurvtyljak [42102-200]
+2023-10-24 23:48:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CATEGORY" не найдена
+Table "CATEGORY" not found; SQL statement:
+alter table category add constraint UK_46ccwnsi9409t36lurvtyljak unique (name) [42102-200]
+2023-10-24 23:48:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "SUBSCRIPTIONS" не найдена
+Table "SUBSCRIPTIONS" not found; SQL statement:
+alter table subscriptions add constraint FKsebk9hy07w5y4a5vrgffo9i53 foreign key (category_id) references category (id) [42102-200]
+2023-10-24 23:48:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "SUBSCRIPTIONS" не найдена
+Table "SUBSCRIPTIONS" not found; SQL statement:
+alter table subscriptions add constraint FKkaixpsyjdf70umrxudsb8evwr foreign key (shared_with_id) references usr (id) [42102-200]
+2023-10-24 23:48:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "SUBSCRIPTIONS" не найдена
+Table "SUBSCRIPTIONS" not found; SQL statement:
+alter table subscriptions add constraint FKgajwxdqxsiqtb16p3l299jx foreign key (user_id) references usr (id) [42102-200]
+2023-10-24 23:48:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "USER_ROLE" не найдена
+Table "USER_ROLE" not found; SQL statement:
+alter table user_role add constraint FKfpm8swft53ulq2hl11yplpr5 foreign key (user_id) references usr (id) [42102-200]
+2023-10-24 23:48:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE CATEGORY (ID BIGINT NOT NULL, AVAILABLE_CONTENT INTEGER, NAME VARCHAR(255), PRICE DOUBLE PRECISION, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE CATEGORY (ID BIGINT NOT NULL, AVAILABLE_CONTENT INTEGER, NAME VARCHAR(255), PRICE DOUBLE PRECISION, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table category (id bigint not null, available_content integer, name varchar(255), price double precision, primary key (id)) engine=InnoDB [42001-200]
+2023-10-24 23:48:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE HIBERNATE_SEQUENCE (NEXT_VAL BIGINT) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE HIBERNATE_SEQUENCE (NEXT_VAL BIGINT) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table hibernate_sequence (next_val bigint) engine=InnoDB [42001-200]
+2023-10-24 23:48:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "HIBERNATE_SEQUENCE" не найдена
+Table "HIBERNATE_SEQUENCE" not found; SQL statement:
+insert into hibernate_sequence values ( 1 ) [42102-200]
+2023-10-24 23:48:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE SUBSCRIPTIONS (ID BIGINT NOT NULL AUTO_INCREMENT, PRICE DOUBLE PRECISION, REMAINING_CONTENT INTEGER, START_DATE DATE, START_PAYMENT_DATE DATE, CATEGORY_ID BIGINT, SHARED_WITH_ID BIGINT, USER_ID BIGINT, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE SUBSCRIPTIONS (ID BIGINT NOT NULL AUTO_INCREMENT, PRICE DOUBLE PRECISION, REMAINING_CONTENT INTEGER, START_DATE DATE, START_PAYMENT_DATE DATE, CATEGORY_ID BIGINT, SHARED_WITH_ID BIGINT, USER_ID BIGINT, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table subscriptions (id bigint not null auto_increment, price double precision, remaining_content integer, start_date date, start_payment_date date, category_id bigint, shared_with_id bigint, user_id bigint, primary key (id)) engine=InnoDB [42001-200]
+2023-10-24 23:48:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE USER_ROLE (USER_ID BIGINT NOT NULL, ROLES VARCHAR(255)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE USER_ROLE (USER_ID BIGINT NOT NULL, ROLES VARCHAR(255)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table user_role (user_id bigint not null, roles varchar(255)) engine=InnoDB [42001-200]
+2023-10-24 23:48:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE USR (ID BIGINT NOT NULL, ACTIVE BIT NOT NULL, PASSWORD VARCHAR(255), USERNAME VARCHAR(255), PRIMARY KEY (ID)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE USR (ID BIGINT NOT NULL, ACTIVE BIT NOT NULL, PASSWORD VARCHAR(255), USERNAME VARCHAR(255), PRIMARY KEY (ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table usr (id bigint not null, active bit not null, password varchar(255), username varchar(255), primary key (id)) engine=InnoDB [42001-200]
+2023-10-24 23:48:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CATEGORY" не найдена
+Table "CATEGORY" not found; SQL statement:
+alter table category drop index UK_46ccwnsi9409t36lurvtyljak [42102-200]
+2023-10-24 23:48:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CATEGORY" не найдена
+Table "CATEGORY" not found; SQL statement:
+alter table category add constraint UK_46ccwnsi9409t36lurvtyljak unique (name) [42102-200]
+2023-10-24 23:48:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "SUBSCRIPTIONS" не найдена
+Table "SUBSCRIPTIONS" not found; SQL statement:
+alter table subscriptions add constraint FKsebk9hy07w5y4a5vrgffo9i53 foreign key (category_id) references category (id) [42102-200]
+2023-10-24 23:48:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "SUBSCRIPTIONS" не найдена
+Table "SUBSCRIPTIONS" not found; SQL statement:
+alter table subscriptions add constraint FKkaixpsyjdf70umrxudsb8evwr foreign key (shared_with_id) references usr (id) [42102-200]
+2023-10-24 23:48:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "SUBSCRIPTIONS" не найдена
+Table "SUBSCRIPTIONS" not found; SQL statement:
+alter table subscriptions add constraint FKgajwxdqxsiqtb16p3l299jx foreign key (user_id) references usr (id) [42102-200]
+2023-10-24 23:48:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "USER_ROLE" не найдена
+Table "USER_ROLE" not found; SQL statement:
+alter table user_role add constraint FKfpm8swft53ulq2hl11yplpr5 foreign key (user_id) references usr (id) [42102-200]
+2023-10-24 23:48:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE CATEGORY (ID BIGINT NOT NULL, AVAILABLE_CONTENT INTEGER, NAME VARCHAR(255), PRICE DOUBLE PRECISION, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE CATEGORY (ID BIGINT NOT NULL, AVAILABLE_CONTENT INTEGER, NAME VARCHAR(255), PRICE DOUBLE PRECISION, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table category (id bigint not null, available_content integer, name varchar(255), price double precision, primary key (id)) engine=InnoDB [42001-200]
+2023-10-24 23:48:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE HIBERNATE_SEQUENCE (NEXT_VAL BIGINT) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE HIBERNATE_SEQUENCE (NEXT_VAL BIGINT) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table hibernate_sequence (next_val bigint) engine=InnoDB [42001-200]
+2023-10-24 23:48:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "HIBERNATE_SEQUENCE" не найдена
+Table "HIBERNATE_SEQUENCE" not found; SQL statement:
+insert into hibernate_sequence values ( 1 ) [42102-200]
+2023-10-24 23:48:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE SUBSCRIPTIONS (ID BIGINT NOT NULL AUTO_INCREMENT, PRICE DOUBLE PRECISION, REMAINING_CONTENT INTEGER, START_DATE DATE, START_PAYMENT_DATE DATE, CATEGORY_ID BIGINT, SHARED_WITH_ID BIGINT, USER_ID BIGINT, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE SUBSCRIPTIONS (ID BIGINT NOT NULL AUTO_INCREMENT, PRICE DOUBLE PRECISION, REMAINING_CONTENT INTEGER, START_DATE DATE, START_PAYMENT_DATE DATE, CATEGORY_ID BIGINT, SHARED_WITH_ID BIGINT, USER_ID BIGINT, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table subscriptions (id bigint not null auto_increment, price double precision, remaining_content integer, start_date date, start_payment_date date, category_id bigint, shared_with_id bigint, user_id bigint, primary key (id)) engine=InnoDB [42001-200]
+2023-10-24 23:48:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE USER_ROLE (USER_ID BIGINT NOT NULL, ROLES VARCHAR(255)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE USER_ROLE (USER_ID BIGINT NOT NULL, ROLES VARCHAR(255)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table user_role (user_id bigint not null, roles varchar(255)) engine=InnoDB [42001-200]
+2023-10-24 23:48:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE USR (ID BIGINT NOT NULL, ACTIVE BIT NOT NULL, PASSWORD VARCHAR(255), USERNAME VARCHAR(255), PRIMARY KEY (ID)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE USR (ID BIGINT NOT NULL, ACTIVE BIT NOT NULL, PASSWORD VARCHAR(255), USERNAME VARCHAR(255), PRIMARY KEY (ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table usr (id bigint not null, active bit not null, password varchar(255), username varchar(255), primary key (id)) engine=InnoDB [42001-200]
+2023-10-24 23:48:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CATEGORY" не найдена
+Table "CATEGORY" not found; SQL statement:
+alter table category drop index UK_46ccwnsi9409t36lurvtyljak [42102-200]
+2023-10-24 23:48:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CATEGORY" не найдена
+Table "CATEGORY" not found; SQL statement:
+alter table category add constraint UK_46ccwnsi9409t36lurvtyljak unique (name) [42102-200]
+2023-10-24 23:48:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "SUBSCRIPTIONS" не найдена
+Table "SUBSCRIPTIONS" not found; SQL statement:
+alter table subscriptions add constraint FKsebk9hy07w5y4a5vrgffo9i53 foreign key (category_id) references category (id) [42102-200]
+2023-10-24 23:48:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "SUBSCRIPTIONS" не найдена
+Table "SUBSCRIPTIONS" not found; SQL statement:
+alter table subscriptions add constraint FKkaixpsyjdf70umrxudsb8evwr foreign key (shared_with_id) references usr (id) [42102-200]
+2023-10-24 23:48:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "SUBSCRIPTIONS" не найдена
+Table "SUBSCRIPTIONS" not found; SQL statement:
+alter table subscriptions add constraint FKgajwxdqxsiqtb16p3l299jx foreign key (user_id) references usr (id) [42102-200]
+2023-10-24 23:48:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "USER_ROLE" не найдена
+Table "USER_ROLE" not found; SQL statement:
+alter table user_role add constraint FKfpm8swft53ulq2hl11yplpr5 foreign key (user_id) references usr (id) [42102-200]
+2023-10-24 23:48:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE CATEGORY (ID BIGINT NOT NULL, AVAILABLE_CONTENT INTEGER, NAME VARCHAR(255), PRICE DOUBLE PRECISION, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE CATEGORY (ID BIGINT NOT NULL, AVAILABLE_CONTENT INTEGER, NAME VARCHAR(255), PRICE DOUBLE PRECISION, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table category (id bigint not null, available_content integer, name varchar(255), price double precision, primary key (id)) engine=InnoDB [42001-200]
+2023-10-24 23:48:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE HIBERNATE_SEQUENCE (NEXT_VAL BIGINT) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE HIBERNATE_SEQUENCE (NEXT_VAL BIGINT) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table hibernate_sequence (next_val bigint) engine=InnoDB [42001-200]
+2023-10-24 23:48:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "HIBERNATE_SEQUENCE" не найдена
+Table "HIBERNATE_SEQUENCE" not found; SQL statement:
+insert into hibernate_sequence values ( 1 ) [42102-200]
+2023-10-24 23:48:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE SUBSCRIPTIONS (ID BIGINT NOT NULL AUTO_INCREMENT, PRICE DOUBLE PRECISION, REMAINING_CONTENT INTEGER, START_DATE DATE, START_PAYMENT_DATE DATE, CATEGORY_ID BIGINT, SHARED_WITH_ID BIGINT, USER_ID BIGINT, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE SUBSCRIPTIONS (ID BIGINT NOT NULL AUTO_INCREMENT, PRICE DOUBLE PRECISION, REMAINING_CONTENT INTEGER, START_DATE DATE, START_PAYMENT_DATE DATE, CATEGORY_ID BIGINT, SHARED_WITH_ID BIGINT, USER_ID BIGINT, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table subscriptions (id bigint not null auto_increment, price double precision, remaining_content integer, start_date date, start_payment_date date, category_id bigint, shared_with_id bigint, user_id bigint, primary key (id)) engine=InnoDB [42001-200]
+2023-10-24 23:48:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE USER_ROLE (USER_ID BIGINT NOT NULL, ROLES VARCHAR(255)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE USER_ROLE (USER_ID BIGINT NOT NULL, ROLES VARCHAR(255)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table user_role (user_id bigint not null, roles varchar(255)) engine=InnoDB [42001-200]
+2023-10-24 23:48:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE USR (ID BIGINT NOT NULL, ACTIVE BIT NOT NULL, PASSWORD VARCHAR(255), USERNAME VARCHAR(255), PRIMARY KEY (ID)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE USR (ID BIGINT NOT NULL, ACTIVE BIT NOT NULL, PASSWORD VARCHAR(255), USERNAME VARCHAR(255), PRIMARY KEY (ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table usr (id bigint not null, active bit not null, password varchar(255), username varchar(255), primary key (id)) engine=InnoDB [42001-200]
+2023-10-24 23:48:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CATEGORY" не найдена
+Table "CATEGORY" not found; SQL statement:
+alter table category drop index UK_46ccwnsi9409t36lurvtyljak [42102-200]
+2023-10-24 23:48:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CATEGORY" не найдена
+Table "CATEGORY" not found; SQL statement:
+alter table category add constraint UK_46ccwnsi9409t36lurvtyljak unique (name) [42102-200]
+2023-10-24 23:48:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "SUBSCRIPTIONS" не найдена
+Table "SUBSCRIPTIONS" not found; SQL statement:
+alter table subscriptions add constraint FKsebk9hy07w5y4a5vrgffo9i53 foreign key (category_id) references category (id) [42102-200]
+2023-10-24 23:48:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "SUBSCRIPTIONS" не найдена
+Table "SUBSCRIPTIONS" not found; SQL statement:
+alter table subscriptions add constraint FKkaixpsyjdf70umrxudsb8evwr foreign key (shared_with_id) references usr (id) [42102-200]
+2023-10-24 23:48:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "SUBSCRIPTIONS" не найдена
+Table "SUBSCRIPTIONS" not found; SQL statement:
+alter table subscriptions add constraint FKgajwxdqxsiqtb16p3l299jx foreign key (user_id) references usr (id) [42102-200]
+2023-10-24 23:48:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "USER_ROLE" не найдена
+Table "USER_ROLE" not found; SQL statement:
+alter table user_role add constraint FKfpm8swft53ulq2hl11yplpr5 foreign key (user_id) references usr (id) [42102-200]
+2023-10-24 23:49:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE CATEGORY (ID BIGINT NOT NULL, AVAILABLE_CONTENT INTEGER, NAME VARCHAR(255), PRICE DOUBLE PRECISION, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE CATEGORY (ID BIGINT NOT NULL, AVAILABLE_CONTENT INTEGER, NAME VARCHAR(255), PRICE DOUBLE PRECISION, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table category (id bigint not null, available_content integer, name varchar(255), price double precision, primary key (id)) engine=InnoDB [42001-200]
+2023-10-24 23:49:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE HIBERNATE_SEQUENCE (NEXT_VAL BIGINT) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE HIBERNATE_SEQUENCE (NEXT_VAL BIGINT) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table hibernate_sequence (next_val bigint) engine=InnoDB [42001-200]
+2023-10-24 23:49:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "HIBERNATE_SEQUENCE" не найдена
+Table "HIBERNATE_SEQUENCE" not found; SQL statement:
+insert into hibernate_sequence values ( 1 ) [42102-200]
+2023-10-24 23:49:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE SUBSCRIPTIONS (ID BIGINT NOT NULL AUTO_INCREMENT, PRICE DOUBLE PRECISION, REMAINING_CONTENT INTEGER, START_DATE DATE, START_PAYMENT_DATE DATE, CATEGORY_ID BIGINT, SHARED_WITH_ID BIGINT, USER_ID BIGINT, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE SUBSCRIPTIONS (ID BIGINT NOT NULL AUTO_INCREMENT, PRICE DOUBLE PRECISION, REMAINING_CONTENT INTEGER, START_DATE DATE, START_PAYMENT_DATE DATE, CATEGORY_ID BIGINT, SHARED_WITH_ID BIGINT, USER_ID BIGINT, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table subscriptions (id bigint not null auto_increment, price double precision, remaining_content integer, start_date date, start_payment_date date, category_id bigint, shared_with_id bigint, user_id bigint, primary key (id)) engine=InnoDB [42001-200]
+2023-10-24 23:49:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE USER_ROLE (USER_ID BIGINT NOT NULL, ROLES VARCHAR(255)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE USER_ROLE (USER_ID BIGINT NOT NULL, ROLES VARCHAR(255)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table user_role (user_id bigint not null, roles varchar(255)) engine=InnoDB [42001-200]
+2023-10-24 23:49:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE USR (ID BIGINT NOT NULL, ACTIVE BIT NOT NULL, PASSWORD VARCHAR(255), USERNAME VARCHAR(255), PRIMARY KEY (ID)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE USR (ID BIGINT NOT NULL, ACTIVE BIT NOT NULL, PASSWORD VARCHAR(255), USERNAME VARCHAR(255), PRIMARY KEY (ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table usr (id bigint not null, active bit not null, password varchar(255), username varchar(255), primary key (id)) engine=InnoDB [42001-200]
+2023-10-24 23:49:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CATEGORY" не найдена
+Table "CATEGORY" not found; SQL statement:
+alter table category drop index UK_46ccwnsi9409t36lurvtyljak [42102-200]
+2023-10-24 23:49:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CATEGORY" не найдена
+Table "CATEGORY" not found; SQL statement:
+alter table category add constraint UK_46ccwnsi9409t36lurvtyljak unique (name) [42102-200]
+2023-10-24 23:49:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "SUBSCRIPTIONS" не найдена
+Table "SUBSCRIPTIONS" not found; SQL statement:
+alter table subscriptions add constraint FKsebk9hy07w5y4a5vrgffo9i53 foreign key (category_id) references category (id) [42102-200]
+2023-10-24 23:49:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "SUBSCRIPTIONS" не найдена
+Table "SUBSCRIPTIONS" not found; SQL statement:
+alter table subscriptions add constraint FKkaixpsyjdf70umrxudsb8evwr foreign key (shared_with_id) references usr (id) [42102-200]
+2023-10-24 23:49:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "SUBSCRIPTIONS" не найдена
+Table "SUBSCRIPTIONS" not found; SQL statement:
+alter table subscriptions add constraint FKgajwxdqxsiqtb16p3l299jx foreign key (user_id) references usr (id) [42102-200]
+2023-10-24 23:49:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "USER_ROLE" не найдена
+Table "USER_ROLE" not found; SQL statement:
+alter table user_role add constraint FKfpm8swft53ulq2hl11yplpr5 foreign key (user_id) references usr (id) [42102-200]
+2023-10-24 23:49:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE CATEGORY (ID BIGINT NOT NULL, AVAILABLE_CONTENT INTEGER, NAME VARCHAR(255), PRICE DOUBLE PRECISION, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE CATEGORY (ID BIGINT NOT NULL, AVAILABLE_CONTENT INTEGER, NAME VARCHAR(255), PRICE DOUBLE PRECISION, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table category (id bigint not null, available_content integer, name varchar(255), price double precision, primary key (id)) engine=InnoDB [42001-200]
+2023-10-24 23:49:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE HIBERNATE_SEQUENCE (NEXT_VAL BIGINT) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE HIBERNATE_SEQUENCE (NEXT_VAL BIGINT) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table hibernate_sequence (next_val bigint) engine=InnoDB [42001-200]
+2023-10-24 23:49:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "HIBERNATE_SEQUENCE" не найдена
+Table "HIBERNATE_SEQUENCE" not found; SQL statement:
+insert into hibernate_sequence values ( 1 ) [42102-200]
+2023-10-24 23:49:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE SUBSCRIPTIONS (ID BIGINT NOT NULL AUTO_INCREMENT, PRICE DOUBLE PRECISION, REMAINING_CONTENT INTEGER, START_DATE DATE, START_PAYMENT_DATE DATE, CATEGORY_ID BIGINT, SHARED_WITH_ID BIGINT, USER_ID BIGINT, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE SUBSCRIPTIONS (ID BIGINT NOT NULL AUTO_INCREMENT, PRICE DOUBLE PRECISION, REMAINING_CONTENT INTEGER, START_DATE DATE, START_PAYMENT_DATE DATE, CATEGORY_ID BIGINT, SHARED_WITH_ID BIGINT, USER_ID BIGINT, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table subscriptions (id bigint not null auto_increment, price double precision, remaining_content integer, start_date date, start_payment_date date, category_id bigint, shared_with_id bigint, user_id bigint, primary key (id)) engine=InnoDB [42001-200]
+2023-10-24 23:49:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE USER_ROLE (USER_ID BIGINT NOT NULL, ROLES VARCHAR(255)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE USER_ROLE (USER_ID BIGINT NOT NULL, ROLES VARCHAR(255)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table user_role (user_id bigint not null, roles varchar(255)) engine=InnoDB [42001-200]
+2023-10-24 23:49:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE USR (ID BIGINT NOT NULL, ACTIVE BIT NOT NULL, PASSWORD VARCHAR(255), USERNAME VARCHAR(255), PRIMARY KEY (ID)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE USR (ID BIGINT NOT NULL, ACTIVE BIT NOT NULL, PASSWORD VARCHAR(255), USERNAME VARCHAR(255), PRIMARY KEY (ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table usr (id bigint not null, active bit not null, password varchar(255), username varchar(255), primary key (id)) engine=InnoDB [42001-200]
+2023-10-24 23:49:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CATEGORY" не найдена
+Table "CATEGORY" not found; SQL statement:
+alter table category drop index UK_46ccwnsi9409t36lurvtyljak [42102-200]
+2023-10-24 23:49:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CATEGORY" не найдена
+Table "CATEGORY" not found; SQL statement:
+alter table category add constraint UK_46ccwnsi9409t36lurvtyljak unique (name) [42102-200]
+2023-10-24 23:49:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "SUBSCRIPTIONS" не найдена
+Table "SUBSCRIPTIONS" not found; SQL statement:
+alter table subscriptions add constraint FKsebk9hy07w5y4a5vrgffo9i53 foreign key (category_id) references category (id) [42102-200]
+2023-10-24 23:49:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "SUBSCRIPTIONS" не найдена
+Table "SUBSCRIPTIONS" not found; SQL statement:
+alter table subscriptions add constraint FKkaixpsyjdf70umrxudsb8evwr foreign key (shared_with_id) references usr (id) [42102-200]
+2023-10-24 23:49:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "SUBSCRIPTIONS" не найдена
+Table "SUBSCRIPTIONS" not found; SQL statement:
+alter table subscriptions add constraint FKgajwxdqxsiqtb16p3l299jx foreign key (user_id) references usr (id) [42102-200]
+2023-10-24 23:49:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "USER_ROLE" не найдена
+Table "USER_ROLE" not found; SQL statement:
+alter table user_role add constraint FKfpm8swft53ulq2hl11yplpr5 foreign key (user_id) references usr (id) [42102-200]
+2023-10-24 23:49:51 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE CATEGORY (ID BIGINT NOT NULL, AVAILABLE_CONTENT INTEGER, NAME VARCHAR(255), PRICE DOUBLE PRECISION, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE CATEGORY (ID BIGINT NOT NULL, AVAILABLE_CONTENT INTEGER, NAME VARCHAR(255), PRICE DOUBLE PRECISION, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table category (id bigint not null, available_content integer, name varchar(255), price double precision, primary key (id)) engine=InnoDB [42001-200]
+2023-10-24 23:49:51 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE HIBERNATE_SEQUENCE (NEXT_VAL BIGINT) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE HIBERNATE_SEQUENCE (NEXT_VAL BIGINT) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table hibernate_sequence (next_val bigint) engine=InnoDB [42001-200]
+2023-10-24 23:49:51 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "HIBERNATE_SEQUENCE" не найдена
+Table "HIBERNATE_SEQUENCE" not found; SQL statement:
+insert into hibernate_sequence values ( 1 ) [42102-200]
+2023-10-24 23:49:51 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE SUBSCRIPTIONS (ID BIGINT NOT NULL AUTO_INCREMENT, PRICE DOUBLE PRECISION, REMAINING_CONTENT INTEGER, START_DATE DATE, START_PAYMENT_DATE DATE, CATEGORY_ID BIGINT, SHARED_WITH_ID BIGINT, USER_ID BIGINT, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE SUBSCRIPTIONS (ID BIGINT NOT NULL AUTO_INCREMENT, PRICE DOUBLE PRECISION, REMAINING_CONTENT INTEGER, START_DATE DATE, START_PAYMENT_DATE DATE, CATEGORY_ID BIGINT, SHARED_WITH_ID BIGINT, USER_ID BIGINT, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table subscriptions (id bigint not null auto_increment, price double precision, remaining_content integer, start_date date, start_payment_date date, category_id bigint, shared_with_id bigint, user_id bigint, primary key (id)) engine=InnoDB [42001-200]
+2023-10-24 23:49:51 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE USER_ROLE (USER_ID BIGINT NOT NULL, ROLES VARCHAR(255)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE USER_ROLE (USER_ID BIGINT NOT NULL, ROLES VARCHAR(255)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table user_role (user_id bigint not null, roles varchar(255)) engine=InnoDB [42001-200]
+2023-10-24 23:49:51 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE USR (ID BIGINT NOT NULL, ACTIVE BIT NOT NULL, PASSWORD VARCHAR(255), USERNAME VARCHAR(255), PRIMARY KEY (ID)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE USR (ID BIGINT NOT NULL, ACTIVE BIT NOT NULL, PASSWORD VARCHAR(255), USERNAME VARCHAR(255), PRIMARY KEY (ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table usr (id bigint not null, active bit not null, password varchar(255), username varchar(255), primary key (id)) engine=InnoDB [42001-200]
+2023-10-24 23:49:51 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CATEGORY" не найдена
+Table "CATEGORY" not found; SQL statement:
+alter table category drop index UK_46ccwnsi9409t36lurvtyljak [42102-200]
+2023-10-24 23:49:51 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CATEGORY" не найдена
+Table "CATEGORY" not found; SQL statement:
+alter table category add constraint UK_46ccwnsi9409t36lurvtyljak unique (name) [42102-200]
+2023-10-24 23:49:51 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "SUBSCRIPTIONS" не найдена
+Table "SUBSCRIPTIONS" not found; SQL statement:
+alter table subscriptions add constraint FKsebk9hy07w5y4a5vrgffo9i53 foreign key (category_id) references category (id) [42102-200]
+2023-10-24 23:49:51 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "SUBSCRIPTIONS" не найдена
+Table "SUBSCRIPTIONS" not found; SQL statement:
+alter table subscriptions add constraint FKkaixpsyjdf70umrxudsb8evwr foreign key (shared_with_id) references usr (id) [42102-200]
+2023-10-24 23:49:51 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "SUBSCRIPTIONS" не найдена
+Table "SUBSCRIPTIONS" not found; SQL statement:
+alter table subscriptions add constraint FKgajwxdqxsiqtb16p3l299jx foreign key (user_id) references usr (id) [42102-200]
+2023-10-24 23:49:51 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "USER_ROLE" не найдена
+Table "USER_ROLE" not found; SQL statement:
+alter table user_role add constraint FKfpm8swft53ulq2hl11yplpr5 foreign key (user_id) references usr (id) [42102-200]
+2023-10-24 23:50:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE CATEGORY (ID BIGINT NOT NULL, AVAILABLE_CONTENT INTEGER, NAME VARCHAR(255), PRICE DOUBLE PRECISION, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE CATEGORY (ID BIGINT NOT NULL, AVAILABLE_CONTENT INTEGER, NAME VARCHAR(255), PRICE DOUBLE PRECISION, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table category (id bigint not null, available_content integer, name varchar(255), price double precision, primary key (id)) engine=InnoDB [42001-200]
+2023-10-24 23:50:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE HIBERNATE_SEQUENCE (NEXT_VAL BIGINT) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE HIBERNATE_SEQUENCE (NEXT_VAL BIGINT) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table hibernate_sequence (next_val bigint) engine=InnoDB [42001-200]
+2023-10-24 23:50:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "HIBERNATE_SEQUENCE" не найдена
+Table "HIBERNATE_SEQUENCE" not found; SQL statement:
+insert into hibernate_sequence values ( 1 ) [42102-200]
+2023-10-24 23:50:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE SUBSCRIPTIONS (ID BIGINT NOT NULL AUTO_INCREMENT, PRICE DOUBLE PRECISION, REMAINING_CONTENT INTEGER, START_DATE DATE, START_PAYMENT_DATE DATE, CATEGORY_ID BIGINT, SHARED_WITH_ID BIGINT, USER_ID BIGINT, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE SUBSCRIPTIONS (ID BIGINT NOT NULL AUTO_INCREMENT, PRICE DOUBLE PRECISION, REMAINING_CONTENT INTEGER, START_DATE DATE, START_PAYMENT_DATE DATE, CATEGORY_ID BIGINT, SHARED_WITH_ID BIGINT, USER_ID BIGINT, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table subscriptions (id bigint not null auto_increment, price double precision, remaining_content integer, start_date date, start_payment_date date, category_id bigint, shared_with_id bigint, user_id bigint, primary key (id)) engine=InnoDB [42001-200]
+2023-10-24 23:50:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE USER_ROLE (USER_ID BIGINT NOT NULL, ROLES VARCHAR(255)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE USER_ROLE (USER_ID BIGINT NOT NULL, ROLES VARCHAR(255)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table user_role (user_id bigint not null, roles varchar(255)) engine=InnoDB [42001-200]
+2023-10-24 23:50:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE USR (ID BIGINT NOT NULL, ACTIVE BIT NOT NULL, PASSWORD VARCHAR(255), USERNAME VARCHAR(255), PRIMARY KEY (ID)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE USR (ID BIGINT NOT NULL, ACTIVE BIT NOT NULL, PASSWORD VARCHAR(255), USERNAME VARCHAR(255), PRIMARY KEY (ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table usr (id bigint not null, active bit not null, password varchar(255), username varchar(255), primary key (id)) engine=InnoDB [42001-200]
+2023-10-24 23:50:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CATEGORY" не найдена
+Table "CATEGORY" not found; SQL statement:
+alter table category drop index UK_46ccwnsi9409t36lurvtyljak [42102-200]
+2023-10-24 23:50:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CATEGORY" не найдена
+Table "CATEGORY" not found; SQL statement:
+alter table category add constraint UK_46ccwnsi9409t36lurvtyljak unique (name) [42102-200]
+2023-10-24 23:50:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "SUBSCRIPTIONS" не найдена
+Table "SUBSCRIPTIONS" not found; SQL statement:
+alter table subscriptions add constraint FKsebk9hy07w5y4a5vrgffo9i53 foreign key (category_id) references category (id) [42102-200]
+2023-10-24 23:50:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "SUBSCRIPTIONS" не найдена
+Table "SUBSCRIPTIONS" not found; SQL statement:
+alter table subscriptions add constraint FKkaixpsyjdf70umrxudsb8evwr foreign key (shared_with_id) references usr (id) [42102-200]
+2023-10-24 23:50:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "SUBSCRIPTIONS" не найдена
+Table "SUBSCRIPTIONS" not found; SQL statement:
+alter table subscriptions add constraint FKgajwxdqxsiqtb16p3l299jx foreign key (user_id) references usr (id) [42102-200]
+2023-10-24 23:50:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "USER_ROLE" не найдена
+Table "USER_ROLE" not found; SQL statement:
+alter table user_role add constraint FKfpm8swft53ulq2hl11yplpr5 foreign key (user_id) references usr (id) [42102-200]
+2023-10-24 23:51:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE CATEGORY (ID BIGINT NOT NULL, AVAILABLE_CONTENT INTEGER, NAME VARCHAR(255), PRICE DOUBLE PRECISION, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE CATEGORY (ID BIGINT NOT NULL, AVAILABLE_CONTENT INTEGER, NAME VARCHAR(255), PRICE DOUBLE PRECISION, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table category (id bigint not null, available_content integer, name varchar(255), price double precision, primary key (id)) engine=InnoDB [42001-200]
+2023-10-24 23:51:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE HIBERNATE_SEQUENCE (NEXT_VAL BIGINT) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE HIBERNATE_SEQUENCE (NEXT_VAL BIGINT) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table hibernate_sequence (next_val bigint) engine=InnoDB [42001-200]
+2023-10-24 23:51:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "HIBERNATE_SEQUENCE" не найдена
+Table "HIBERNATE_SEQUENCE" not found; SQL statement:
+insert into hibernate_sequence values ( 1 ) [42102-200]
+2023-10-24 23:51:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE SUBSCRIPTIONS (ID BIGINT NOT NULL AUTO_INCREMENT, PRICE DOUBLE PRECISION, REMAINING_CONTENT INTEGER, START_DATE DATE, START_PAYMENT_DATE DATE, CATEGORY_ID BIGINT, SHARED_WITH_ID BIGINT, USER_ID BIGINT, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE SUBSCRIPTIONS (ID BIGINT NOT NULL AUTO_INCREMENT, PRICE DOUBLE PRECISION, REMAINING_CONTENT INTEGER, START_DATE DATE, START_PAYMENT_DATE DATE, CATEGORY_ID BIGINT, SHARED_WITH_ID BIGINT, USER_ID BIGINT, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table subscriptions (id bigint not null auto_increment, price double precision, remaining_content integer, start_date date, start_payment_date date, category_id bigint, shared_with_id bigint, user_id bigint, primary key (id)) engine=InnoDB [42001-200]
+2023-10-24 23:51:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE USER_ROLE (USER_ID BIGINT NOT NULL, ROLES VARCHAR(255)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE USER_ROLE (USER_ID BIGINT NOT NULL, ROLES VARCHAR(255)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table user_role (user_id bigint not null, roles varchar(255)) engine=InnoDB [42001-200]
+2023-10-24 23:51:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE USR (ID BIGINT NOT NULL, ACTIVE BIT NOT NULL, PASSWORD VARCHAR(255), USERNAME VARCHAR(255), PRIMARY KEY (ID)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE USR (ID BIGINT NOT NULL, ACTIVE BIT NOT NULL, PASSWORD VARCHAR(255), USERNAME VARCHAR(255), PRIMARY KEY (ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table usr (id bigint not null, active bit not null, password varchar(255), username varchar(255), primary key (id)) engine=InnoDB [42001-200]
+2023-10-24 23:51:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CATEGORY" не найдена
+Table "CATEGORY" not found; SQL statement:
+alter table category drop index UK_46ccwnsi9409t36lurvtyljak [42102-200]
+2023-10-24 23:51:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CATEGORY" не найдена
+Table "CATEGORY" not found; SQL statement:
+alter table category add constraint UK_46ccwnsi9409t36lurvtyljak unique (name) [42102-200]
+2023-10-24 23:51:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "SUBSCRIPTIONS" не найдена
+Table "SUBSCRIPTIONS" not found; SQL statement:
+alter table subscriptions add constraint FKsebk9hy07w5y4a5vrgffo9i53 foreign key (category_id) references category (id) [42102-200]
+2023-10-24 23:51:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "SUBSCRIPTIONS" не найдена
+Table "SUBSCRIPTIONS" not found; SQL statement:
+alter table subscriptions add constraint FKkaixpsyjdf70umrxudsb8evwr foreign key (shared_with_id) references usr (id) [42102-200]
+2023-10-24 23:51:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "SUBSCRIPTIONS" не найдена
+Table "SUBSCRIPTIONS" not found; SQL statement:
+alter table subscriptions add constraint FKgajwxdqxsiqtb16p3l299jx foreign key (user_id) references usr (id) [42102-200]
+2023-10-24 23:51:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "USER_ROLE" не найдена
+Table "USER_ROLE" not found; SQL statement:
+alter table user_role add constraint FKfpm8swft53ulq2hl11yplpr5 foreign key (user_id) references usr (id) [42102-200]
+2023-10-24 23:51:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE CATEGORY (ID BIGINT NOT NULL, AVAILABLE_CONTENT INTEGER, NAME VARCHAR(255), PRICE DOUBLE PRECISION, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE CATEGORY (ID BIGINT NOT NULL, AVAILABLE_CONTENT INTEGER, NAME VARCHAR(255), PRICE DOUBLE PRECISION, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table category (id bigint not null, available_content integer, name varchar(255), price double precision, primary key (id)) engine=InnoDB [42001-200]
+2023-10-24 23:51:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE HIBERNATE_SEQUENCE (NEXT_VAL BIGINT) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE HIBERNATE_SEQUENCE (NEXT_VAL BIGINT) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table hibernate_sequence (next_val bigint) engine=InnoDB [42001-200]
+2023-10-24 23:51:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "HIBERNATE_SEQUENCE" не найдена
+Table "HIBERNATE_SEQUENCE" not found; SQL statement:
+insert into hibernate_sequence values ( 1 ) [42102-200]
+2023-10-24 23:51:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE SUBSCRIPTIONS (ID BIGINT NOT NULL AUTO_INCREMENT, PRICE DOUBLE PRECISION, REMAINING_CONTENT INTEGER, START_DATE DATE, START_PAYMENT_DATE DATE, CATEGORY_ID BIGINT, SHARED_WITH_ID BIGINT, USER_ID BIGINT, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE SUBSCRIPTIONS (ID BIGINT NOT NULL AUTO_INCREMENT, PRICE DOUBLE PRECISION, REMAINING_CONTENT INTEGER, START_DATE DATE, START_PAYMENT_DATE DATE, CATEGORY_ID BIGINT, SHARED_WITH_ID BIGINT, USER_ID BIGINT, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table subscriptions (id bigint not null auto_increment, price double precision, remaining_content integer, start_date date, start_payment_date date, category_id bigint, shared_with_id bigint, user_id bigint, primary key (id)) engine=InnoDB [42001-200]
+2023-10-24 23:51:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE USER_ROLE (USER_ID BIGINT NOT NULL, ROLES VARCHAR(255)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE USER_ROLE (USER_ID BIGINT NOT NULL, ROLES VARCHAR(255)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table user_role (user_id bigint not null, roles varchar(255)) engine=InnoDB [42001-200]
+2023-10-24 23:51:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE USR (ID BIGINT NOT NULL, ACTIVE BIT NOT NULL, PASSWORD VARCHAR(255), USERNAME VARCHAR(255), PRIMARY KEY (ID)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE USR (ID BIGINT NOT NULL, ACTIVE BIT NOT NULL, PASSWORD VARCHAR(255), USERNAME VARCHAR(255), PRIMARY KEY (ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table usr (id bigint not null, active bit not null, password varchar(255), username varchar(255), primary key (id)) engine=InnoDB [42001-200]
+2023-10-24 23:51:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CATEGORY" не найдена
+Table "CATEGORY" not found; SQL statement:
+alter table category drop index UK_46ccwnsi9409t36lurvtyljak [42102-200]
+2023-10-24 23:51:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CATEGORY" не найдена
+Table "CATEGORY" not found; SQL statement:
+alter table category add constraint UK_46ccwnsi9409t36lurvtyljak unique (name) [42102-200]
+2023-10-24 23:51:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "SUBSCRIPTIONS" не найдена
+Table "SUBSCRIPTIONS" not found; SQL statement:
+alter table subscriptions add constraint FKsebk9hy07w5y4a5vrgffo9i53 foreign key (category_id) references category (id) [42102-200]
+2023-10-24 23:51:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "SUBSCRIPTIONS" не найдена
+Table "SUBSCRIPTIONS" not found; SQL statement:
+alter table subscriptions add constraint FKkaixpsyjdf70umrxudsb8evwr foreign key (shared_with_id) references usr (id) [42102-200]
+2023-10-24 23:51:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "SUBSCRIPTIONS" не найдена
+Table "SUBSCRIPTIONS" not found; SQL statement:
+alter table subscriptions add constraint FKgajwxdqxsiqtb16p3l299jx foreign key (user_id) references usr (id) [42102-200]
+2023-10-24 23:51:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "USER_ROLE" не найдена
+Table "USER_ROLE" not found; SQL statement:
+alter table user_role add constraint FKfpm8swft53ulq2hl11yplpr5 foreign key (user_id) references usr (id) [42102-200]
+2023-10-24 23:51:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE CATEGORY (ID BIGINT NOT NULL, AVAILABLE_CONTENT INTEGER, NAME VARCHAR(255), PRICE DOUBLE PRECISION, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE CATEGORY (ID BIGINT NOT NULL, AVAILABLE_CONTENT INTEGER, NAME VARCHAR(255), PRICE DOUBLE PRECISION, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table category (id bigint not null, available_content integer, name varchar(255), price double precision, primary key (id)) engine=InnoDB [42001-200]
+2023-10-24 23:51:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE HIBERNATE_SEQUENCE (NEXT_VAL BIGINT) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE HIBERNATE_SEQUENCE (NEXT_VAL BIGINT) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table hibernate_sequence (next_val bigint) engine=InnoDB [42001-200]
+2023-10-24 23:51:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "HIBERNATE_SEQUENCE" не найдена
+Table "HIBERNATE_SEQUENCE" not found; SQL statement:
+insert into hibernate_sequence values ( 1 ) [42102-200]
+2023-10-24 23:51:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE SUBSCRIPTIONS (ID BIGINT NOT NULL AUTO_INCREMENT, PRICE DOUBLE PRECISION, REMAINING_CONTENT INTEGER, START_DATE DATE, START_PAYMENT_DATE DATE, CATEGORY_ID BIGINT, SHARED_WITH_ID BIGINT, USER_ID BIGINT, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE SUBSCRIPTIONS (ID BIGINT NOT NULL AUTO_INCREMENT, PRICE DOUBLE PRECISION, REMAINING_CONTENT INTEGER, START_DATE DATE, START_PAYMENT_DATE DATE, CATEGORY_ID BIGINT, SHARED_WITH_ID BIGINT, USER_ID BIGINT, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table subscriptions (id bigint not null auto_increment, price double precision, remaining_content integer, start_date date, start_payment_date date, category_id bigint, shared_with_id bigint, user_id bigint, primary key (id)) engine=InnoDB [42001-200]
+2023-10-24 23:51:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE USER_ROLE (USER_ID BIGINT NOT NULL, ROLES VARCHAR(255)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE USER_ROLE (USER_ID BIGINT NOT NULL, ROLES VARCHAR(255)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table user_role (user_id bigint not null, roles varchar(255)) engine=InnoDB [42001-200]
+2023-10-24 23:51:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE USR (ID BIGINT NOT NULL, ACTIVE BIT NOT NULL, PASSWORD VARCHAR(255), USERNAME VARCHAR(255), PRIMARY KEY (ID)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE USR (ID BIGINT NOT NULL, ACTIVE BIT NOT NULL, PASSWORD VARCHAR(255), USERNAME VARCHAR(255), PRIMARY KEY (ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table usr (id bigint not null, active bit not null, password varchar(255), username varchar(255), primary key (id)) engine=InnoDB [42001-200]
+2023-10-24 23:51:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CATEGORY" не найдена
+Table "CATEGORY" not found; SQL statement:
+alter table category drop index UK_46ccwnsi9409t36lurvtyljak [42102-200]
+2023-10-24 23:51:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CATEGORY" не найдена
+Table "CATEGORY" not found; SQL statement:
+alter table category add constraint UK_46ccwnsi9409t36lurvtyljak unique (name) [42102-200]
+2023-10-24 23:51:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "SUBSCRIPTIONS" не найдена
+Table "SUBSCRIPTIONS" not found; SQL statement:
+alter table subscriptions add constraint FKsebk9hy07w5y4a5vrgffo9i53 foreign key (category_id) references category (id) [42102-200]
+2023-10-24 23:51:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "SUBSCRIPTIONS" не найдена
+Table "SUBSCRIPTIONS" not found; SQL statement:
+alter table subscriptions add constraint FKkaixpsyjdf70umrxudsb8evwr foreign key (shared_with_id) references usr (id) [42102-200]
+2023-10-24 23:51:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "SUBSCRIPTIONS" не найдена
+Table "SUBSCRIPTIONS" not found; SQL statement:
+alter table subscriptions add constraint FKgajwxdqxsiqtb16p3l299jx foreign key (user_id) references usr (id) [42102-200]
+2023-10-24 23:51:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "USER_ROLE" не найдена
+Table "USER_ROLE" not found; SQL statement:
+alter table user_role add constraint FKfpm8swft53ulq2hl11yplpr5 foreign key (user_id) references usr (id) [42102-200]
+2023-10-24 23:51:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE CATEGORY (ID BIGINT NOT NULL, AVAILABLE_CONTENT INTEGER, NAME VARCHAR(255), PRICE DOUBLE PRECISION, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE CATEGORY (ID BIGINT NOT NULL, AVAILABLE_CONTENT INTEGER, NAME VARCHAR(255), PRICE DOUBLE PRECISION, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table category (id bigint not null, available_content integer, name varchar(255), price double precision, primary key (id)) engine=InnoDB [42001-200]
+2023-10-24 23:51:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE HIBERNATE_SEQUENCE (NEXT_VAL BIGINT) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE HIBERNATE_SEQUENCE (NEXT_VAL BIGINT) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table hibernate_sequence (next_val bigint) engine=InnoDB [42001-200]
+2023-10-24 23:51:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "HIBERNATE_SEQUENCE" не найдена
+Table "HIBERNATE_SEQUENCE" not found; SQL statement:
+insert into hibernate_sequence values ( 1 ) [42102-200]
+2023-10-24 23:51:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE SUBSCRIPTIONS (ID BIGINT NOT NULL AUTO_INCREMENT, PRICE DOUBLE PRECISION, REMAINING_CONTENT INTEGER, START_DATE DATE, START_PAYMENT_DATE DATE, CATEGORY_ID BIGINT, SHARED_WITH_ID BIGINT, USER_ID BIGINT, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE SUBSCRIPTIONS (ID BIGINT NOT NULL AUTO_INCREMENT, PRICE DOUBLE PRECISION, REMAINING_CONTENT INTEGER, START_DATE DATE, START_PAYMENT_DATE DATE, CATEGORY_ID BIGINT, SHARED_WITH_ID BIGINT, USER_ID BIGINT, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table subscriptions (id bigint not null auto_increment, price double precision, remaining_content integer, start_date date, start_payment_date date, category_id bigint, shared_with_id bigint, user_id bigint, primary key (id)) engine=InnoDB [42001-200]
+2023-10-24 23:51:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE USER_ROLE (USER_ID BIGINT NOT NULL, ROLES VARCHAR(255)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE USER_ROLE (USER_ID BIGINT NOT NULL, ROLES VARCHAR(255)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table user_role (user_id bigint not null, roles varchar(255)) engine=InnoDB [42001-200]
+2023-10-24 23:51:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE USR (ID BIGINT NOT NULL, ACTIVE BIT NOT NULL, PASSWORD VARCHAR(255), USERNAME VARCHAR(255), PRIMARY KEY (ID)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE USR (ID BIGINT NOT NULL, ACTIVE BIT NOT NULL, PASSWORD VARCHAR(255), USERNAME VARCHAR(255), PRIMARY KEY (ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table usr (id bigint not null, active bit not null, password varchar(255), username varchar(255), primary key (id)) engine=InnoDB [42001-200]
+2023-10-24 23:51:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CATEGORY" не найдена
+Table "CATEGORY" not found; SQL statement:
+alter table category drop index UK_46ccwnsi9409t36lurvtyljak [42102-200]
+2023-10-24 23:51:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CATEGORY" не найдена
+Table "CATEGORY" not found; SQL statement:
+alter table category add constraint UK_46ccwnsi9409t36lurvtyljak unique (name) [42102-200]
+2023-10-24 23:51:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "SUBSCRIPTIONS" не найдена
+Table "SUBSCRIPTIONS" not found; SQL statement:
+alter table subscriptions add constraint FKsebk9hy07w5y4a5vrgffo9i53 foreign key (category_id) references category (id) [42102-200]
+2023-10-24 23:51:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "SUBSCRIPTIONS" не найдена
+Table "SUBSCRIPTIONS" not found; SQL statement:
+alter table subscriptions add constraint FKkaixpsyjdf70umrxudsb8evwr foreign key (shared_with_id) references usr (id) [42102-200]
+2023-10-24 23:51:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "SUBSCRIPTIONS" не найдена
+Table "SUBSCRIPTIONS" not found; SQL statement:
+alter table subscriptions add constraint FKgajwxdqxsiqtb16p3l299jx foreign key (user_id) references usr (id) [42102-200]
+2023-10-24 23:51:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "USER_ROLE" не найдена
+Table "USER_ROLE" not found; SQL statement:
+alter table user_role add constraint FKfpm8swft53ulq2hl11yplpr5 foreign key (user_id) references usr (id) [42102-200]
+2023-10-24 23:52:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE CATEGORY (ID BIGINT NOT NULL, AVAILABLE_CONTENT INTEGER, NAME VARCHAR(255), PRICE DOUBLE PRECISION, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE CATEGORY (ID BIGINT NOT NULL, AVAILABLE_CONTENT INTEGER, NAME VARCHAR(255), PRICE DOUBLE PRECISION, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table category (id bigint not null, available_content integer, name varchar(255), price double precision, primary key (id)) engine=InnoDB [42001-200]
+2023-10-24 23:52:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE HIBERNATE_SEQUENCE (NEXT_VAL BIGINT) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE HIBERNATE_SEQUENCE (NEXT_VAL BIGINT) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table hibernate_sequence (next_val bigint) engine=InnoDB [42001-200]
+2023-10-24 23:52:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "HIBERNATE_SEQUENCE" не найдена
+Table "HIBERNATE_SEQUENCE" not found; SQL statement:
+insert into hibernate_sequence values ( 1 ) [42102-200]
+2023-10-24 23:52:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE SUBSCRIPTIONS (ID BIGINT NOT NULL AUTO_INCREMENT, PRICE DOUBLE PRECISION, REMAINING_CONTENT INTEGER, START_DATE DATE, START_PAYMENT_DATE DATE, CATEGORY_ID BIGINT, SHARED_WITH_ID BIGINT, USER_ID BIGINT, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE SUBSCRIPTIONS (ID BIGINT NOT NULL AUTO_INCREMENT, PRICE DOUBLE PRECISION, REMAINING_CONTENT INTEGER, START_DATE DATE, START_PAYMENT_DATE DATE, CATEGORY_ID BIGINT, SHARED_WITH_ID BIGINT, USER_ID BIGINT, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table subscriptions (id bigint not null auto_increment, price double precision, remaining_content integer, start_date date, start_payment_date date, category_id bigint, shared_with_id bigint, user_id bigint, primary key (id)) engine=InnoDB [42001-200]
+2023-10-24 23:52:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE USER_ROLE (USER_ID BIGINT NOT NULL, ROLES VARCHAR(255)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE USER_ROLE (USER_ID BIGINT NOT NULL, ROLES VARCHAR(255)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table user_role (user_id bigint not null, roles varchar(255)) engine=InnoDB [42001-200]
+2023-10-24 23:52:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE USR (ID BIGINT NOT NULL, ACTIVE BIT NOT NULL, PASSWORD VARCHAR(255), USERNAME VARCHAR(255), PRIMARY KEY (ID)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE USR (ID BIGINT NOT NULL, ACTIVE BIT NOT NULL, PASSWORD VARCHAR(255), USERNAME VARCHAR(255), PRIMARY KEY (ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table usr (id bigint not null, active bit not null, password varchar(255), username varchar(255), primary key (id)) engine=InnoDB [42001-200]
+2023-10-24 23:52:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CATEGORY" не найдена
+Table "CATEGORY" not found; SQL statement:
+alter table category drop index UK_46ccwnsi9409t36lurvtyljak [42102-200]
+2023-10-24 23:52:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CATEGORY" не найдена
+Table "CATEGORY" not found; SQL statement:
+alter table category add constraint UK_46ccwnsi9409t36lurvtyljak unique (name) [42102-200]
+2023-10-24 23:52:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "SUBSCRIPTIONS" не найдена
+Table "SUBSCRIPTIONS" not found; SQL statement:
+alter table subscriptions add constraint FKsebk9hy07w5y4a5vrgffo9i53 foreign key (category_id) references category (id) [42102-200]
+2023-10-24 23:52:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "SUBSCRIPTIONS" не найдена
+Table "SUBSCRIPTIONS" not found; SQL statement:
+alter table subscriptions add constraint FKkaixpsyjdf70umrxudsb8evwr foreign key (shared_with_id) references usr (id) [42102-200]
+2023-10-24 23:52:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "SUBSCRIPTIONS" не найдена
+Table "SUBSCRIPTIONS" not found; SQL statement:
+alter table subscriptions add constraint FKgajwxdqxsiqtb16p3l299jx foreign key (user_id) references usr (id) [42102-200]
+2023-10-24 23:52:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "USER_ROLE" не найдена
+Table "USER_ROLE" not found; SQL statement:
+alter table user_role add constraint FKfpm8swft53ulq2hl11yplpr5 foreign key (user_id) references usr (id) [42102-200]
+2023-10-24 23:53:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE CATEGORY (ID BIGINT NOT NULL, AVAILABLE_CONTENT INTEGER, NAME VARCHAR(255), PRICE DOUBLE PRECISION, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE CATEGORY (ID BIGINT NOT NULL, AVAILABLE_CONTENT INTEGER, NAME VARCHAR(255), PRICE DOUBLE PRECISION, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table category (id bigint not null, available_content integer, name varchar(255), price double precision, primary key (id)) engine=InnoDB [42001-200]
+2023-10-24 23:53:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE HIBERNATE_SEQUENCE (NEXT_VAL BIGINT) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE HIBERNATE_SEQUENCE (NEXT_VAL BIGINT) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table hibernate_sequence (next_val bigint) engine=InnoDB [42001-200]
+2023-10-24 23:53:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "HIBERNATE_SEQUENCE" не найдена
+Table "HIBERNATE_SEQUENCE" not found; SQL statement:
+insert into hibernate_sequence values ( 1 ) [42102-200]
+2023-10-24 23:53:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE SUBSCRIPTIONS (ID BIGINT NOT NULL AUTO_INCREMENT, PRICE DOUBLE PRECISION, REMAINING_CONTENT INTEGER, START_DATE DATE, START_PAYMENT_DATE DATE, CATEGORY_ID BIGINT, SHARED_WITH_ID BIGINT, USER_ID BIGINT, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE SUBSCRIPTIONS (ID BIGINT NOT NULL AUTO_INCREMENT, PRICE DOUBLE PRECISION, REMAINING_CONTENT INTEGER, START_DATE DATE, START_PAYMENT_DATE DATE, CATEGORY_ID BIGINT, SHARED_WITH_ID BIGINT, USER_ID BIGINT, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table subscriptions (id bigint not null auto_increment, price double precision, remaining_content integer, start_date date, start_payment_date date, category_id bigint, shared_with_id bigint, user_id bigint, primary key (id)) engine=InnoDB [42001-200]
+2023-10-24 23:53:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE USER_ROLE (USER_ID BIGINT NOT NULL, ROLES VARCHAR(255)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE USER_ROLE (USER_ID BIGINT NOT NULL, ROLES VARCHAR(255)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table user_role (user_id bigint not null, roles varchar(255)) engine=InnoDB [42001-200]
+2023-10-24 23:53:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE USR (ID BIGINT NOT NULL, ACTIVE BIT NOT NULL, PASSWORD VARCHAR(255), USERNAME VARCHAR(255), PRIMARY KEY (ID)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE USR (ID BIGINT NOT NULL, ACTIVE BIT NOT NULL, PASSWORD VARCHAR(255), USERNAME VARCHAR(255), PRIMARY KEY (ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table usr (id bigint not null, active bit not null, password varchar(255), username varchar(255), primary key (id)) engine=InnoDB [42001-200]
+2023-10-24 23:53:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CATEGORY" не найдена
+Table "CATEGORY" not found; SQL statement:
+alter table category drop index UK_46ccwnsi9409t36lurvtyljak [42102-200]
+2023-10-24 23:53:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CATEGORY" не найдена
+Table "CATEGORY" not found; SQL statement:
+alter table category add constraint UK_46ccwnsi9409t36lurvtyljak unique (name) [42102-200]
+2023-10-24 23:53:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "SUBSCRIPTIONS" не найдена
+Table "SUBSCRIPTIONS" not found; SQL statement:
+alter table subscriptions add constraint FKsebk9hy07w5y4a5vrgffo9i53 foreign key (category_id) references category (id) [42102-200]
+2023-10-24 23:53:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "SUBSCRIPTIONS" не найдена
+Table "SUBSCRIPTIONS" not found; SQL statement:
+alter table subscriptions add constraint FKkaixpsyjdf70umrxudsb8evwr foreign key (shared_with_id) references usr (id) [42102-200]
+2023-10-24 23:53:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "SUBSCRIPTIONS" не найдена
+Table "SUBSCRIPTIONS" not found; SQL statement:
+alter table subscriptions add constraint FKgajwxdqxsiqtb16p3l299jx foreign key (user_id) references usr (id) [42102-200]
+2023-10-24 23:53:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "USER_ROLE" не найдена
+Table "USER_ROLE" not found; SQL statement:
+alter table user_role add constraint FKfpm8swft53ulq2hl11yplpr5 foreign key (user_id) references usr (id) [42102-200]
+2023-10-24 23:53:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE CATEGORY (ID BIGINT NOT NULL, AVAILABLE_CONTENT INTEGER, NAME VARCHAR(255), PRICE DOUBLE PRECISION, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE CATEGORY (ID BIGINT NOT NULL, AVAILABLE_CONTENT INTEGER, NAME VARCHAR(255), PRICE DOUBLE PRECISION, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table category (id bigint not null, available_content integer, name varchar(255), price double precision, primary key (id)) engine=InnoDB [42001-200]
+2023-10-24 23:53:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE HIBERNATE_SEQUENCE (NEXT_VAL BIGINT) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE HIBERNATE_SEQUENCE (NEXT_VAL BIGINT) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table hibernate_sequence (next_val bigint) engine=InnoDB [42001-200]
+2023-10-24 23:53:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "HIBERNATE_SEQUENCE" не найдена
+Table "HIBERNATE_SEQUENCE" not found; SQL statement:
+insert into hibernate_sequence values ( 1 ) [42102-200]
+2023-10-24 23:53:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE SUBSCRIPTIONS (ID BIGINT NOT NULL AUTO_INCREMENT, PRICE DOUBLE PRECISION, REMAINING_CONTENT INTEGER, START_DATE DATE, START_PAYMENT_DATE DATE, CATEGORY_ID BIGINT, SHARED_WITH_ID BIGINT, USER_ID BIGINT, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE SUBSCRIPTIONS (ID BIGINT NOT NULL AUTO_INCREMENT, PRICE DOUBLE PRECISION, REMAINING_CONTENT INTEGER, START_DATE DATE, START_PAYMENT_DATE DATE, CATEGORY_ID BIGINT, SHARED_WITH_ID BIGINT, USER_ID BIGINT, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table subscriptions (id bigint not null auto_increment, price double precision, remaining_content integer, start_date date, start_payment_date date, category_id bigint, shared_with_id bigint, user_id bigint, primary key (id)) engine=InnoDB [42001-200]
+2023-10-24 23:53:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE USER_ROLE (USER_ID BIGINT NOT NULL, ROLES VARCHAR(255)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE USER_ROLE (USER_ID BIGINT NOT NULL, ROLES VARCHAR(255)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table user_role (user_id bigint not null, roles varchar(255)) engine=InnoDB [42001-200]
+2023-10-24 23:53:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE USR (ID BIGINT NOT NULL, ACTIVE BIT NOT NULL, PASSWORD VARCHAR(255), USERNAME VARCHAR(255), PRIMARY KEY (ID)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE USR (ID BIGINT NOT NULL, ACTIVE BIT NOT NULL, PASSWORD VARCHAR(255), USERNAME VARCHAR(255), PRIMARY KEY (ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table usr (id bigint not null, active bit not null, password varchar(255), username varchar(255), primary key (id)) engine=InnoDB [42001-200]
+2023-10-24 23:53:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CATEGORY" не найдена
+Table "CATEGORY" not found; SQL statement:
+alter table category drop index UK_46ccwnsi9409t36lurvtyljak [42102-200]
+2023-10-24 23:53:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CATEGORY" не найдена
+Table "CATEGORY" not found; SQL statement:
+alter table category add constraint UK_46ccwnsi9409t36lurvtyljak unique (name) [42102-200]
+2023-10-24 23:53:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "SUBSCRIPTIONS" не найдена
+Table "SUBSCRIPTIONS" not found; SQL statement:
+alter table subscriptions add constraint FKsebk9hy07w5y4a5vrgffo9i53 foreign key (category_id) references category (id) [42102-200]
+2023-10-24 23:53:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "SUBSCRIPTIONS" не найдена
+Table "SUBSCRIPTIONS" not found; SQL statement:
+alter table subscriptions add constraint FKkaixpsyjdf70umrxudsb8evwr foreign key (shared_with_id) references usr (id) [42102-200]
+2023-10-24 23:53:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "SUBSCRIPTIONS" не найдена
+Table "SUBSCRIPTIONS" not found; SQL statement:
+alter table subscriptions add constraint FKgajwxdqxsiqtb16p3l299jx foreign key (user_id) references usr (id) [42102-200]
+2023-10-24 23:53:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "USER_ROLE" не найдена
+Table "USER_ROLE" not found; SQL statement:
+alter table user_role add constraint FKfpm8swft53ulq2hl11yplpr5 foreign key (user_id) references usr (id) [42102-200]
+2023-10-24 23:53:56 jdbc[16]: null
+org.h2.message.DbException: Незакрытое приложением соединение уничтожено сборщиком мусора
+The connection was not closed by the application and is garbage collected [90018-200]
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:245)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:186)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:152)
+	at org.h2.Driver.connect(Driver.java:69)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration.lambda$h2Console$0(H2ConsoleAutoConfiguration.java:67)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory$DependencyObjectProvider.ifAvailable(DefaultListableBeanFactory.java:2035)
+	at org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration.h2Console(H2ConsoleAutoConfiguration.java:66)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:212)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:203)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addServletContextInitializerBeans(ServletContextInitializerBeans.java:97)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:86)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:260)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:234)
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:53)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5219)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1396)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1386)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:919)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:835)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1396)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1386)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:919)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:263)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:432)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:927)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:486)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:450)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:199)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:182)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:160)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:577)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at com.example.sogeti.Application.main(Application.java:9)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: Незакрытое приложением соединение уничтожено сборщиком мусора
+The connection was not closed by the application and is garbage collected [90018-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:622)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 81 more
+2023-10-24 23:53:56 jdbc[16]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE CATEGORY (ID BIGINT NOT NULL, AVAILABLE_CONTENT INTEGER, NAME VARCHAR(255), PRICE DOUBLE PRECISION, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE CATEGORY (ID BIGINT NOT NULL, AVAILABLE_CONTENT INTEGER, NAME VARCHAR(255), PRICE DOUBLE PRECISION, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table category (id bigint not null, available_content integer, name varchar(255), price double precision, primary key (id)) engine=InnoDB [42001-200]
+2023-10-24 23:53:56 jdbc[16]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE HIBERNATE_SEQUENCE (NEXT_VAL BIGINT) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE HIBERNATE_SEQUENCE (NEXT_VAL BIGINT) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table hibernate_sequence (next_val bigint) engine=InnoDB [42001-200]
+2023-10-24 23:53:56 jdbc[16]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "HIBERNATE_SEQUENCE" не найдена
+Table "HIBERNATE_SEQUENCE" not found; SQL statement:
+insert into hibernate_sequence values ( 1 ) [42102-200]
+2023-10-24 23:53:56 jdbc[16]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE SUBSCRIPTIONS (ID BIGINT NOT NULL AUTO_INCREMENT, PRICE DOUBLE PRECISION, REMAINING_CONTENT INTEGER, START_DATE DATE, START_PAYMENT_DATE DATE, CATEGORY_ID BIGINT, SHARED_WITH_ID BIGINT, USER_ID BIGINT, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE SUBSCRIPTIONS (ID BIGINT NOT NULL AUTO_INCREMENT, PRICE DOUBLE PRECISION, REMAINING_CONTENT INTEGER, START_DATE DATE, START_PAYMENT_DATE DATE, CATEGORY_ID BIGINT, SHARED_WITH_ID BIGINT, USER_ID BIGINT, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table subscriptions (id bigint not null auto_increment, price double precision, remaining_content integer, start_date date, start_payment_date date, category_id bigint, shared_with_id bigint, user_id bigint, primary key (id)) engine=InnoDB [42001-200]
+2023-10-24 23:53:56 jdbc[16]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE USER_ROLE (USER_ID BIGINT NOT NULL, ROLES VARCHAR(255)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE USER_ROLE (USER_ID BIGINT NOT NULL, ROLES VARCHAR(255)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table user_role (user_id bigint not null, roles varchar(255)) engine=InnoDB [42001-200]
+2023-10-24 23:53:56 jdbc[16]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE USR (ID BIGINT NOT NULL, ACTIVE BIT NOT NULL, PASSWORD VARCHAR(255), USERNAME VARCHAR(255), PRIMARY KEY (ID)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE USR (ID BIGINT NOT NULL, ACTIVE BIT NOT NULL, PASSWORD VARCHAR(255), USERNAME VARCHAR(255), PRIMARY KEY (ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table usr (id bigint not null, active bit not null, password varchar(255), username varchar(255), primary key (id)) engine=InnoDB [42001-200]
+2023-10-24 23:53:56 jdbc[16]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CATEGORY" не найдена
+Table "CATEGORY" not found; SQL statement:
+alter table category drop index UK_46ccwnsi9409t36lurvtyljak [42102-200]
+2023-10-24 23:53:56 jdbc[16]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CATEGORY" не найдена
+Table "CATEGORY" not found; SQL statement:
+alter table category add constraint UK_46ccwnsi9409t36lurvtyljak unique (name) [42102-200]
+2023-10-24 23:53:56 jdbc[16]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "SUBSCRIPTIONS" не найдена
+Table "SUBSCRIPTIONS" not found; SQL statement:
+alter table subscriptions add constraint FKsebk9hy07w5y4a5vrgffo9i53 foreign key (category_id) references category (id) [42102-200]
+2023-10-24 23:53:56 jdbc[16]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "SUBSCRIPTIONS" не найдена
+Table "SUBSCRIPTIONS" not found; SQL statement:
+alter table subscriptions add constraint FKkaixpsyjdf70umrxudsb8evwr foreign key (shared_with_id) references usr (id) [42102-200]
+2023-10-24 23:53:56 jdbc[16]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "SUBSCRIPTIONS" не найдена
+Table "SUBSCRIPTIONS" not found; SQL statement:
+alter table subscriptions add constraint FKgajwxdqxsiqtb16p3l299jx foreign key (user_id) references usr (id) [42102-200]
+2023-10-24 23:53:56 jdbc[16]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "USER_ROLE" не найдена
+Table "USER_ROLE" not found; SQL statement:
+alter table user_role add constraint FKfpm8swft53ulq2hl11yplpr5 foreign key (user_id) references usr (id) [42102-200]
+2023-10-24 23:54:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE CATEGORY (ID BIGINT NOT NULL, AVAILABLE_CONTENT INTEGER, NAME VARCHAR(255), PRICE DOUBLE PRECISION, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE CATEGORY (ID BIGINT NOT NULL, AVAILABLE_CONTENT INTEGER, NAME VARCHAR(255), PRICE DOUBLE PRECISION, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table category (id bigint not null, available_content integer, name varchar(255), price double precision, primary key (id)) engine=InnoDB [42001-200]
+2023-10-24 23:54:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE HIBERNATE_SEQUENCE (NEXT_VAL BIGINT) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE HIBERNATE_SEQUENCE (NEXT_VAL BIGINT) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table hibernate_sequence (next_val bigint) engine=InnoDB [42001-200]
+2023-10-24 23:54:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "HIBERNATE_SEQUENCE" не найдена
+Table "HIBERNATE_SEQUENCE" not found; SQL statement:
+insert into hibernate_sequence values ( 1 ) [42102-200]
+2023-10-24 23:54:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE SUBSCRIPTIONS (ID BIGINT NOT NULL AUTO_INCREMENT, PRICE DOUBLE PRECISION, REMAINING_CONTENT INTEGER, START_DATE DATE, START_PAYMENT_DATE DATE, CATEGORY_ID BIGINT, SHARED_WITH_ID BIGINT, USER_ID BIGINT, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE SUBSCRIPTIONS (ID BIGINT NOT NULL AUTO_INCREMENT, PRICE DOUBLE PRECISION, REMAINING_CONTENT INTEGER, START_DATE DATE, START_PAYMENT_DATE DATE, CATEGORY_ID BIGINT, SHARED_WITH_ID BIGINT, USER_ID BIGINT, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table subscriptions (id bigint not null auto_increment, price double precision, remaining_content integer, start_date date, start_payment_date date, category_id bigint, shared_with_id bigint, user_id bigint, primary key (id)) engine=InnoDB [42001-200]
+2023-10-24 23:54:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE USER_ROLE (USER_ID BIGINT NOT NULL, ROLES VARCHAR(255)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE USER_ROLE (USER_ID BIGINT NOT NULL, ROLES VARCHAR(255)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table user_role (user_id bigint not null, roles varchar(255)) engine=InnoDB [42001-200]
+2023-10-24 23:54:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE USR (ID BIGINT NOT NULL, ACTIVE BIT NOT NULL, PASSWORD VARCHAR(255), USERNAME VARCHAR(255), PRIMARY KEY (ID)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE USR (ID BIGINT NOT NULL, ACTIVE BIT NOT NULL, PASSWORD VARCHAR(255), USERNAME VARCHAR(255), PRIMARY KEY (ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table usr (id bigint not null, active bit not null, password varchar(255), username varchar(255), primary key (id)) engine=InnoDB [42001-200]
+2023-10-24 23:54:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CATEGORY" не найдена
+Table "CATEGORY" not found; SQL statement:
+alter table category drop index UK_46ccwnsi9409t36lurvtyljak [42102-200]
+2023-10-24 23:54:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CATEGORY" не найдена
+Table "CATEGORY" not found; SQL statement:
+alter table category add constraint UK_46ccwnsi9409t36lurvtyljak unique (name) [42102-200]
+2023-10-24 23:54:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "SUBSCRIPTIONS" не найдена
+Table "SUBSCRIPTIONS" not found; SQL statement:
+alter table subscriptions add constraint FKsebk9hy07w5y4a5vrgffo9i53 foreign key (category_id) references category (id) [42102-200]
+2023-10-24 23:54:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "SUBSCRIPTIONS" не найдена
+Table "SUBSCRIPTIONS" not found; SQL statement:
+alter table subscriptions add constraint FKkaixpsyjdf70umrxudsb8evwr foreign key (shared_with_id) references usr (id) [42102-200]
+2023-10-24 23:54:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "SUBSCRIPTIONS" не найдена
+Table "SUBSCRIPTIONS" not found; SQL statement:
+alter table subscriptions add constraint FKgajwxdqxsiqtb16p3l299jx foreign key (user_id) references usr (id) [42102-200]
+2023-10-24 23:54:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "USER_ROLE" не найдена
+Table "USER_ROLE" not found; SQL statement:
+alter table user_role add constraint FKfpm8swft53ulq2hl11yplpr5 foreign key (user_id) references usr (id) [42102-200]
+2023-10-24 23:54:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE CATEGORY (ID BIGINT NOT NULL, AVAILABLE_CONTENT INTEGER, NAME VARCHAR(255), PRICE DOUBLE PRECISION, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE CATEGORY (ID BIGINT NOT NULL, AVAILABLE_CONTENT INTEGER, NAME VARCHAR(255), PRICE DOUBLE PRECISION, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table category (id bigint not null, available_content integer, name varchar(255), price double precision, primary key (id)) engine=InnoDB [42001-200]
+2023-10-24 23:54:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE HIBERNATE_SEQUENCE (NEXT_VAL BIGINT) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE HIBERNATE_SEQUENCE (NEXT_VAL BIGINT) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table hibernate_sequence (next_val bigint) engine=InnoDB [42001-200]
+2023-10-24 23:54:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "HIBERNATE_SEQUENCE" не найдена
+Table "HIBERNATE_SEQUENCE" not found; SQL statement:
+insert into hibernate_sequence values ( 1 ) [42102-200]
+2023-10-24 23:54:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE SUBSCRIPTIONS (ID BIGINT NOT NULL AUTO_INCREMENT, PRICE DOUBLE PRECISION, REMAINING_CONTENT INTEGER, START_DATE DATE, START_PAYMENT_DATE DATE, CATEGORY_ID BIGINT, SHARED_WITH_ID BIGINT, USER_ID BIGINT, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE SUBSCRIPTIONS (ID BIGINT NOT NULL AUTO_INCREMENT, PRICE DOUBLE PRECISION, REMAINING_CONTENT INTEGER, START_DATE DATE, START_PAYMENT_DATE DATE, CATEGORY_ID BIGINT, SHARED_WITH_ID BIGINT, USER_ID BIGINT, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table subscriptions (id bigint not null auto_increment, price double precision, remaining_content integer, start_date date, start_payment_date date, category_id bigint, shared_with_id bigint, user_id bigint, primary key (id)) engine=InnoDB [42001-200]
+2023-10-24 23:54:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE USER_ROLE (USER_ID BIGINT NOT NULL, ROLES VARCHAR(255)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE USER_ROLE (USER_ID BIGINT NOT NULL, ROLES VARCHAR(255)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table user_role (user_id bigint not null, roles varchar(255)) engine=InnoDB [42001-200]
+2023-10-24 23:54:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE USR (ID BIGINT NOT NULL, ACTIVE BIT NOT NULL, PASSWORD VARCHAR(255), USERNAME VARCHAR(255), PRIMARY KEY (ID)) ENGINE=[*]INNODB"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE USR (ID BIGINT NOT NULL, ACTIVE BIT NOT NULL, PASSWORD VARCHAR(255), USERNAME VARCHAR(255), PRIMARY KEY (ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table usr (id bigint not null, active bit not null, password varchar(255), username varchar(255), primary key (id)) engine=InnoDB [42001-200]
+2023-10-24 23:54:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CATEGORY" не найдена
+Table "CATEGORY" not found; SQL statement:
+alter table category drop index UK_46ccwnsi9409t36lurvtyljak [42102-200]
+2023-10-24 23:54:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CATEGORY" не найдена
+Table "CATEGORY" not found; SQL statement:
+alter table category add constraint UK_46ccwnsi9409t36lurvtyljak unique (name) [42102-200]
+2023-10-24 23:54:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "SUBSCRIPTIONS" не найдена
+Table "SUBSCRIPTIONS" not found; SQL statement:
+alter table subscriptions add constraint FKsebk9hy07w5y4a5vrgffo9i53 foreign key (category_id) references category (id) [42102-200]
+2023-10-24 23:54:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "SUBSCRIPTIONS" не найдена
+Table "SUBSCRIPTIONS" not found; SQL statement:
+alter table subscriptions add constraint FKkaixpsyjdf70umrxudsb8evwr foreign key (shared_with_id) references usr (id) [42102-200]
+2023-10-24 23:54:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "SUBSCRIPTIONS" не найдена
+Table "SUBSCRIPTIONS" not found; SQL statement:
+alter table subscriptions add constraint FKgajwxdqxsiqtb16p3l299jx foreign key (user_id) references usr (id) [42102-200]
+2023-10-24 23:54:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "USER_ROLE" не найдена
+Table "USER_ROLE" not found; SQL statement:
+alter table user_role add constraint FKfpm8swft53ulq2hl11yplpr5 foreign key (user_id) references usr (id) [42102-200]
+2023-10-25 01:08:28 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CATEGORY" уже существует
+Table "CATEGORY" already exists; SQL statement:
+CREATE TABLE category (
+  id INT PRIMARY KEY,
+  available_content INT DEFAULT NULL,
+  name VARCHAR(255) DEFAULT NULL,
+  price DOUBLE DEFAULT NULL
+) [42101-200]
+2023-10-25 01:34:31 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "USER_ID[*]"; ожидалось "UPDATE, USE"
+Syntax error in SQL statement "USER_ID[*]"; expected "UPDATE, USE"; SQL statement:
+USER_ID [42001-200]
+2023-10-25 01:34:34 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "USER_ID[*]"; ожидалось "UPDATE, USE"
+Syntax error in SQL statement "USER_ID[*]"; expected "UPDATE, USE"; SQL statement:
+USER_ID [42001-200]
+2023-10-25 01:34:40 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "USER_ID[*] ROLES"; ожидалось "UPDATE, USE"
+Syntax error in SQL statement "USER_ID[*] ROLES"; expected "UPDATE, USE"; SQL statement:
+USER_ID ROLES [42001-200]
+2023-10-25 01:34:52 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ID[*]"; ожидалось "INSERT"
+Syntax error in SQL statement "ID[*]"; expected "INSERT"; SQL statement:
+ID [42001-200]
+2023-10-25 01:34:54 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ID[*] AVAILABLE_CONTENT"; ожидалось "INSERT"
+Syntax error in SQL statement "ID[*] AVAILABLE_CONTENT"; expected "INSERT"; SQL statement:
+ID AVAILABLE_CONTENT [42001-200]
+2023-10-25 01:34:59 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "AVAILABLE_CONTENT[*]"; ожидалось "ALTER, ANALYZE"
+Syntax error in SQL statement "AVAILABLE_CONTENT[*]"; expected "ALTER, ANALYZE"; SQL statement:
+AVAILABLE_CONTENT [42001-200]
+2023-10-25 01:36:16 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "USER_ROLE[*]"; ожидалось "UPDATE, USE"
+Syntax error in SQL statement "USER_ROLE[*]"; expected "UPDATE, USE"; SQL statement:
+USER_ROLE [42001-200]
+2023-10-25 09:56:44 database: wrong user or password; user: "SA"
+org.h2.message.DbException: Неверное имя пользователя или пароль
+Wrong user name or password [28000-200]
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.engine.Engine.openSession(Engine.java:131)
+	at org.h2.engine.Engine.openSession(Engine.java:192)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:171)
+	at org.h2.engine.Engine.createSession(Engine.java:166)
+	at org.h2.engine.Engine.createSession(Engine.java:29)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:340)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:152)
+	at org.h2.Driver.connect(Driver.java:69)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration.lambda$h2Console$0(H2ConsoleAutoConfiguration.java:67)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory$DependencyObjectProvider.ifAvailable(DefaultListableBeanFactory.java:2035)
+	at org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration.h2Console(H2ConsoleAutoConfiguration.java:66)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:212)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:203)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addServletContextInitializerBeans(ServletContextInitializerBeans.java:97)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:86)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:260)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:234)
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:53)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5219)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1396)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1386)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:919)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:835)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1396)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1386)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:919)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:263)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:432)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:927)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:486)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:450)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:199)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:182)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:160)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:577)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at com.example.sogeti.Application.main(Application.java:9)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.h2.jdbc.JdbcSQLInvalidAuthorizationSpecException: Неверное имя пользователя или пароль
+Wrong user name or password [28000-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:461)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 86 more
+2023-10-25 09:56:48 database: wrong user or password; user: "SA"
+org.h2.message.DbException: Неверное имя пользователя или пароль
+Wrong user name or password [28000-200]
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.engine.Engine.openSession(Engine.java:131)
+	at org.h2.engine.Engine.openSession(Engine.java:192)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:171)
+	at org.h2.engine.Engine.createSession(Engine.java:166)
+	at org.h2.engine.Engine.createSession(Engine.java:29)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:340)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:152)
+	at org.h2.Driver.connect(Driver.java:69)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:176)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1224)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1255)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at com.example.sogeti.Application.main(Application.java:9)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.h2.jdbc.JdbcSQLInvalidAuthorizationSpecException: Неверное имя пользователя или пароль
+Wrong user name or password [28000-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:461)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 63 more
+2023-10-25 09:58:15 database: wrong user or password; user: "SA"
+org.h2.message.DbException: Неверное имя пользователя или пароль
+Wrong user name or password [28000-200]
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.engine.Engine.openSession(Engine.java:131)
+	at org.h2.engine.Engine.openSession(Engine.java:192)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:171)
+	at org.h2.engine.Engine.createSession(Engine.java:166)
+	at org.h2.engine.Engine.createSession(Engine.java:29)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:340)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:152)
+	at org.h2.Driver.connect(Driver.java:69)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration.lambda$h2Console$0(H2ConsoleAutoConfiguration.java:67)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory$DependencyObjectProvider.ifAvailable(DefaultListableBeanFactory.java:2035)
+	at org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration.h2Console(H2ConsoleAutoConfiguration.java:66)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:212)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:203)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addServletContextInitializerBeans(ServletContextInitializerBeans.java:97)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:86)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:260)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:234)
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:53)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5219)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1396)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1386)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:919)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:835)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1396)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1386)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:919)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:263)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:432)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:927)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:486)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:450)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:199)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:182)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:160)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:577)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at com.example.sogeti.Application.main(Application.java:9)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.h2.jdbc.JdbcSQLInvalidAuthorizationSpecException: Неверное имя пользователя или пароль
+Wrong user name or password [28000-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:461)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 86 more
+2023-10-25 09:58:18 database: wrong user or password; user: "SA"
+org.h2.message.DbException: Неверное имя пользователя или пароль
+Wrong user name or password [28000-200]
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.engine.Engine.openSession(Engine.java:131)
+	at org.h2.engine.Engine.openSession(Engine.java:192)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:171)
+	at org.h2.engine.Engine.createSession(Engine.java:166)
+	at org.h2.engine.Engine.createSession(Engine.java:29)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:340)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:152)
+	at org.h2.Driver.connect(Driver.java:69)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:176)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1224)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1255)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at com.example.sogeti.Application.main(Application.java:9)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.h2.jdbc.JdbcSQLInvalidAuthorizationSpecException: Неверное имя пользователя или пароль
+Wrong user name or password [28000-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:461)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 63 more
