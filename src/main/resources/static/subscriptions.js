@@ -28,7 +28,7 @@ function unsubscribeFromCategory(buttonElement, subscriptionId) {
     var xhr = new XMLHttpRequest();
     xhr.open('DELETE', '/api/subscriptions/' + subscriptionId, true);
 
-    // Если у вас есть CSRF-защита
+    // CSRF-protection
 //    var token = document.querySelector('meta[name="_csrf"]').content;
 //    var header = document.querySelector('meta[name="_csrf_header"]').content;
 //    xhr.setRequestHeader(header, token);
